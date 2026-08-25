@@ -1,17 +1,5 @@
 ## Introduce our project wify! 👋
-
-<!--
-
-**Here are some ideas to get you started:**
-
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
-
-## wify — Watch Intelligent Fall for You
+### wify — Watch Intelligent Fall for You
 
 🇰🇷 한국어 | [🇬🇧 English](./README.en.md)
 
@@ -23,7 +11,7 @@
 
 기존 비상 호출벨은 사용자가 의식을 잃거나 움직일 수 없으면 무용지물이고, 카메라 기반 감시는 화장실이라는 공간 특성상 프라이버시 문제로 도입이 어렵습니다. wify는 **WiFi CSI(Channel State Information)** 기술로 이 두 가지 문제를 동시에 해결합니다.
 
-> 2026 글로벌 PUDA 프로젝트(한·일 노인돌봄 ICT 공모전) 출품작입니다.
+> 2026 글로벌 PIUDA 프로젝트(한·일 노인돌봄 ICT 공모전) 출품작입니다.
 
 ## 왜 필요한가
 
@@ -52,7 +40,7 @@ WiFi 송신(Tx) → 사람 움직임에 따른 전파 변화 → CSI 데이터 �
 
 ## 시스템 구조
 
-- **송신부(Tx)** — 평소 Deep Sleep 유지 → PIR 센서가 인체 진입을 감지하면 인터럽트로 기상 → ESP-NOW로 수신부에 CSI 탐지용 Ping 패킷 전송
+- **송신부(Tx)** — ESP-NOW로 수신부에 CSI 탐지용 Ping 패킷 전송
 - **수신부(Rx)** — Ping 수신 → CSI(진폭/위상) 추출 → 배경 노이즈(Baseline) 제거 → 특징 추출 및 링 버퍼 적재 → TinyML 모델로 낙상 여부 분류 → MQTT로 서버·앱에 알림 전송
 
 ```
@@ -76,7 +64,6 @@ ESP32(Rx) → Server → App
 
 - **복지 시설** — 요양원, 노인복지관, 장애인 시설, 병원 화장실
 - **일반 가정** — 독거노인 가구, 노부모 동거 가정, 스마트홈 환경
-
 ESP32 두 대만으로 구성되어 별도 인프라 구축 없이 설치할 수 있습니다.
 -----
 <img width="732" height="1276" alt="image" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
