@@ -72,4 +72,5 @@ Because the system consists of only two ESP32 boards, it can be installed withou
 
 <img width="732" height="1276" alt="image" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
 
-Awarded 4th place (Encouragement Prize) at the Chungbuk PIUDA Project Competition.
+- Awarded 4th place (Encouragement Prize) at the Chungbuk PIUDA Project Competition.
+- Participation and exhibition of the 'wify' project by the 'Nonamed' club from Daedeok Software Meister High School at Daefcon.
