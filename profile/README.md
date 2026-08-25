@@ -1,0 +1,84 @@
+## Hi there 👋
+
+<!--
+
+**Here are some ideas to get you started:**
+
+🙋‍♀️ A short introduction - what is your organization all about?
+🌈 Contribution guidelines - how can the community get involved?
+👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
+🍿 Fun facts - what does your team eat for breakfast?
+🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+-->
+
+## wify — Watch Intelligent Fall for You
+
+🇰🇷 한국어 | [🇬🇧 English](./README.en.md)
+
+> 카메라 없이, 착용 없이 — WiFi 신호만으로 노인의 화장실 낙상을 감지하는 프라이버시 친화형 실시간 Edge AI 시스템
+
+## 프로젝트 소개
+
+**wify**는 노인 화장실 내 낙상 사고를 카메라 없이 자동으로 감지하고, 관리자에게 즉시 알림을 전송하는 Edge AI 기반 안전 시스템입니다.
+
+기존 비상 호출벨은 사용자가 의식을 잃거나 움직일 수 없으면 무용지물이고, 카메라 기반 감시는 화장실이라는 공간 특성상 프라이버시 문제로 도입이 어렵습니다. wify는 **WiFi CSI(Channel State Information)** 기술로 이 두 가지 문제를 동시에 해결합니다.
+
+> 2026 글로벌 PUDA 프로젝트(한·일 노인돌봄 ICT 공모전) 출품작입니다.
+
+## 왜 필요한가
+
+- 낙상은 65세 이상 노인 손상 사망 원인 1위이며, 화장실은 대표적인 고위험 공간입니다.
+- **비상 호출벨** — 의식을 잃거나 손이 닿지 않으면 무용지물
+- **CCTV** — 화장실 설치 자체가 어려울 만큼 프라이버시 침해 우려가 큼
+- **인력 기반 돌봄** — 인력 부족, 노인의 심리적 수치심, 상시 동행의 현실적 한계
+
+## 핵심 기술: WiFi CSI
+
+CSI(Channel State Information)는 WiFi 신호가 공간을 통과하며 벽·사물·사람 몸에 반사·산란되는 과정에서 발생하는 진폭(Amplitude)·위상(Phase) 변화를 수치화한 정보입니다. 사람이 움직이면 전파 경로가 미세하게 바뀌고, 그 변화가 CSI 데이터에 그대로 반영됩니다. wify는 이 WiFi 신호 자체를 보이지 않는 센서로 활용합니다.
+
+```
+WiFi 송신(Tx) → 사람 움직임에 따른 전파 변화 → CSI 데이터 추출
+→ Edge AI 실시간 분석 → 낙상 판단 및 관리자 알림
+```
+
+## 핵심 차별성
+
+| 구분 | 내용 |
+|---|---|
+| 비접촉 · 비카메라 | ESP32 두 대만 설치하면 동작. 웨어러블·카메라·사용자 조작이 필요 없음 |
+| 환경 독립적 | 설치 시 10초간 빈 공간 데이터로 기준선(Baseline) 생성 → 실시간 데이터에서 이를 차감해 움직임 신호만 추출 |
+| 완전한 On-Device AI (TinyML) | ESP32 내부에서 TensorFlow Lite Micro + INT8 양자화 1D-CNN으로 추론 → 클라우드 불필요, 지연 없음, 개인정보 미전송, 서버 비용 없음 |
+| 실시간 알림 | 낙상 감지 시 관리자 스마트폰으로 즉각 알림, 이상 행동 사전 감지도 수행 |
+
+## 시스템 구조
+
+- **송신부(Tx)** — 평소 Deep Sleep 유지 → PIR 센서가 인체 진입을 감지하면 인터럽트로 기상 → ESP-NOW로 수신부에 CSI 탐지용 Ping 패킷 전송
+- **수신부(Rx)** — Ping 수신 → CSI(진폭/위상) 추출 → 배경 노이즈(Baseline) 제거 → 특징 추출 및 링 버퍼 적재 → TinyML 모델로 낙상 여부 분류 → MQTT로 서버·앱에 알림 전송
+
+```
+ESP32(Rx) → Server → App
+     App → Server → ESP32
+```
+
+낙상 판정은 **ESP32 온디바이스 AI**가 담당하고, 원격 알림·확장 경로는 **MQTT**가 맡는 구조입니다.
+
+## 기술 스택 & 개발 단계
+
+| 단계 | 내용 | 기술 |
+|---|---|---|
+| 1 | ESP32 CSI 통신 구축 (Tx/Rx) | C/C++, ESP32, ESP-NOW |
+| 2 | 데이터 수집 및 라벨링 | Python |
+| 3 | AI 모델 학습 | TensorFlow, Keras |
+| 4 | TinyML 양자화 | TensorFlow Lite |
+| 5 | Edge AI 통합 및 알림 시스템 | TFLite Micro, RTOS, MQTT |
+
+## 활용 환경
+
+- **복지 시설** — 요양원, 노인복지관, 장애인 시설, 병원 화장실
+- **일반 가정** — 독거노인 가구, 노부모 동거 가정, 스마트홈 환경
+
+ESP32 두 대만으로 구성되어 별도 인프라 구축 없이 설치할 수 있습니다.
+-----
+<img width="732" height="1276" alt="image" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
+
+충북 피우다 프로젝트 대회에서 4위 장려상을 수상하였습니다.
