@@ -68,5 +68,5 @@ ESP32 두 대만으로 구성되어 별도 인프라 구축 없이 설치할 수
 -----
 <img width="732" height="1276" alt="image" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
 
-충북 피우다 프로젝트 대회에서 4위 장려상을 수상하였습니다.
-대덕소프트웨어마이스터고등하교 Nonamed동아리 wify프로젝트 대프콘 참여 및 전시
+- 충북 피우다 프로젝트 대회에서 4위 장려상을 수상
+- 대덕소프트웨어마이스터고등하교 Nonamed동아리 wify프로젝트 대프콘 참여 및 전시
