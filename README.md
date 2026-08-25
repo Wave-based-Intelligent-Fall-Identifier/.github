@@ -65,3 +65,7 @@ ESP32(Rx) → Server → App
 - **일반 가정** — 독거노인 가구, 노부모 동거 가정, 스마트홈 환경
 
 ESP32 두 대만으로 구성되어 별도 인프라 구축 없이 설치할 수 있습니다.
+-----
+<img width="732" height="1276" alt="image" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
+
+충북 피우다 프로젝트 대회에서 4위 장려상을 수상하였습니다.
