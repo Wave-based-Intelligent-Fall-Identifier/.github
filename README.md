@@ -10,7 +10,7 @@
 
 기존 비상 호출벨은 사용자가 의식을 잃거나 움직일 수 없으면 무용지물이고, 카메라 기반 감시는 화장실이라는 공간 특성상 프라이버시 문제로 도입이 어렵습니다. wify는 **WiFi CSI(Channel State Information)** 기술로 이 두 가지 문제를 동시에 해결합니다.
 
-> 2026 글로벌 PUDA 프로젝트(한·일 노인돌봄 ICT 공모전) 출품작입니다.
+> 2026 글로벌 PIUDA 프로젝트(한·일 노인돌봄 ICT 공모전) 출품작입니다.
 
 ## 왜 필요한가
 
@@ -66,6 +66,14 @@ ESP32(Rx) → Server → App
 
 ESP32 두 대만으로 구성되어 별도 인프라 구축 없이 설치할 수 있습니다.
 -----
-<img width="732" height="1276" alt="image" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
 
-충북 피우다 프로젝트 대회에서 4위 장려상을 수상하였습니다.
+## 🏆 수상 & 활동
+
+<p align="center">
+<img alt="2026 충청권 글로벌 피우다 프로젝트 장려상 수상" src="profile/assets/피우다_상.jpg" width="330" />
+&nbsp;&nbsp;
+<img width="330" alt="wify 전시" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
+</p>
+
+- **2026 충청권 글로벌 피우다 프로젝트(SW Innovation Day) 장려상(3위) 수상** — 상금 100만원, 팀 Nonamed(이다연·염세현·이지우)
+- 대덕소프트웨어마이스터고등학교 Nonamed 동아리 wify 프로젝트로 대프콘 참여 및 전시

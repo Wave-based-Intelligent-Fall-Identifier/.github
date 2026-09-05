@@ -70,7 +70,13 @@ Because the system consists of only two ESP32 boards, it can be installed withou
 
 -----
 
-<img width="732" height="1276" alt="image" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
+## 🏆 Awards & Activities
 
-- Awarded 4th place (Encouragement Prize) at the Chungbuk PIUDA Project Competition.
-- Participation and exhibition of the 'wify' project by the 'Nonamed' club from Daedeok Software Meister High School at Daefcon.
+<p align="center">
+<img alt="Encouragement Prize, 2026 Global PIUDA Project" src="assets/피우다_상.jpg" width="330" />
+&nbsp;&nbsp;
+<img width="330" alt="wify exhibition" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
+</p>
+
+- **Encouragement Prize (3rd place) at the 2026 Global PIUDA Project (SW Innovation Day)** — KRW 1,000,000 prize; team Nonamed (Lee Dayeon, Yeom Sehyeon, Lee Jiwoo).
+- Exhibited the 'wify' project as the 'Nonamed' club of Daedeok Software Meister High School at Daefcon.
