@@ -70,9 +70,7 @@ ESP32 두 대만으로 구성되어 별도 인프라 구축 없이 설치할 수
 ## 🏆 수상 & 활동
 
 <p align="center">
-<img alt="2026 충청권 글로벌 피우다 프로젝트 장려상 수상" src="profile/assets/피우다_상.jpg" width="330" />
-&nbsp;&nbsp;
-<img width="330" alt="wify 전시" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
+<img alt="2026 충청권 글로벌 피우다 프로젝트 장려상 수상" src="profile/assets/피우다_상.jpg" width="360" />
 </p>
 
 - **2026 충청권 글로벌 피우다 프로젝트(SW Innovation Day) 장려상(3위) 수상** — 상금 100만원, 팀 Nonamed(이다연·염세현·이지우)

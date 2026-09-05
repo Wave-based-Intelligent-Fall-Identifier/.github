@@ -73,9 +73,7 @@ Because the system consists of only two ESP32 boards, it can be installed withou
 ## 🏆 Awards & Activities
 
 <p align="center">
-<img alt="Encouragement Prize, 2026 Global PIUDA Project" src="assets/피우다_상.jpg" width="330" />
-&nbsp;&nbsp;
-<img width="330" alt="wify exhibition" src="https://github.com/user-attachments/assets/bc48f1fc-0439-45bf-a978-42e0c82da5f8" />
+<img alt="Encouragement Prize, 2026 Global PIUDA Project" src="assets/피우다_상.jpg" width="360" />
 </p>
 
 - **Encouragement Prize (3rd place) at the 2026 Global PIUDA Project (SW Innovation Day)** — KRW 1,000,000 prize; team Nonamed (Lee Dayeon, Yeom Sehyeon, Lee Jiwoo).
