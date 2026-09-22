@@ -75,3 +75,5 @@ ESP32 두 대만으로 구성되어 별도 인프라 구축 없이 설치할 수
 
 - **2026 충청권 글로벌 피우다 프로젝트(SW Innovation Day) 장려상(3위) 수상** — 상금 100만원, 팀 Nonamed(이다연·염세현·이지우)
 - 대덕소프트웨어마이스터고등학교 Nonamed 동아리 wify 프로젝트로 대프콘 참여 및 전시
+
+[📑 발표 PPT 보기](./assets/Nonamed-wify-PPT.pdf)
